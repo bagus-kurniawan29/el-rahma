@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.php": { "runtime": "vercel-php@0.7.1" },
-    "api/includes/**/*.php": { "runtime": "vercel-php@0.7.1" }
+  "build": {
+    "env": {
+      "PHP_VERSION": "8.2"
+    }
   },
   "routes": [
     {
@@ -15,27 +16,23 @@
     },
     {
       "src": "/profil",
-      "dest": "/api/profil.php"
+      "dest": "/profil.php"
     },
     {
       "src": "/portofolio",
-      "dest": "/api/portofolio.php"
+      "dest": "/portofolio.php"
     },
     {
       "src": "/layanan",
-      "dest": "/api/layanan.php"
+      "dest": "/layanan.php"
     },
     {
       "src": "/kontak",
-      "dest": "/api/kontak.php"
-    },
-    {
-      "src": "/",
-      "dest": "/api/index.php"
+      "dest": "/kontak.php"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/index.php"
     }
   ]
 }
