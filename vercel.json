@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "*.php", "use": "vercel-php@0.7.1" },
-    { "src": "includes/**/*.php", "use": "vercel-php@0.7.1" },
-    { "src": "assets/**", "use": "@vercel/static" },
-    { "src": "data/**", "use": "@vercel/static" }
-  ],
+  "functions": {
+    "api/*.php": { "runtime": "vercel-php@0.7.1" },
+    "api/includes/**/*.php": { "runtime": "vercel-php@0.7.1" }
+  },
   "routes": [
     {
       "src": "/assets/(.*)",
@@ -17,23 +15,27 @@
     },
     {
       "src": "/profil",
-      "dest": "/profil.php"
+      "dest": "/api/profil.php"
     },
     {
       "src": "/portofolio",
-      "dest": "/portofolio.php"
+      "dest": "/api/portofolio.php"
     },
     {
       "src": "/layanan",
-      "dest": "/layanan.php"
+      "dest": "/api/layanan.php"
     },
     {
       "src": "/kontak",
-      "dest": "/kontak.php"
+      "dest": "/api/kontak.php"
+    },
+    {
+      "src": "/",
+      "dest": "/api/index.php"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.php"
+      "dest": "/api/index.php"
     }
   ]
 }
