@@ -1,8 +1,5 @@
 <?php
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
-
-// Membantu saat dijalankan lokal dengan PHP built-in server:
-// php -S localhost:8000 api/index.php
 if (strpos($path, '/assets/') === 0) {
     $assetFile = __DIR__ . '/..' . $path;
     if (is_file($assetFile)) {

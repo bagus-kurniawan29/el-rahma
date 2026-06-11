@@ -13,9 +13,7 @@
         </div>
         <div class="hero-media">
             <div class="photo-placeholder">
-                <span>MAIN HERO IMAGE</span>
-                <strong>Foto kantor / kegiatan koperasi</strong>
-                <p>Ganti bagian ini dengan foto asli agar website terlihat lebih resmi.</p>
+                <img src="assets/img/kantor.png" alt="">
             </div>
         </div>
     </div>
