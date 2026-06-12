@@ -1,42 +1,9 @@
-<?php $pageTitle = 'Portofolio - Koperasi Syariah El-Rahma'; include 'includes/header.php'; ?>
+<?php $pageTitle = 'Program - Koperasi Syariah El Rahma Lombok Rinjani'; include 'includes/header.php'; ?>
 
-<section class="page-hero compact-hero">
-    <div class="container">
-        <span class="eyebrow">Portofolio Koperasi</span>
-        <h1>Dokumentasi program, kegiatan, dan dampak untuk anggota.</h1>
-        <p>Portofolio tidak dibuat seperti portofolio desain, tetapi seperti dokumentasi program koperasi: pembiayaan, simpanan, UMKM, edukasi, dan kegiatan sosial.</p>
-    </div>
-</section>
+<section class="bg-gradient-to-br from-brand-blue to-brand-navy py-16 text-white sm:py-20"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><span class="text-sm font-bold uppercase tracking-widest text-white/65">Program Koperasi</span><h1 class="mt-4 max-w-4xl text-4xl font-black leading-tight sm:text-5xl">Program nyata untuk anggota dan usaha lokal.</h1><p class="mt-5 max-w-3xl text-lg leading-8 text-white/70">Rangkaian kegiatan pembiayaan, simpanan, edukasi, UMKM, dan kepedulian sosial.</p></div></section>
 
-<section class="section-pad bg-soft">
-    <div class="container">
-        <div class="portfolio-grid three-col">
-            <?php foreach ($portfolio as $item): ?>
-                <article class="portfolio-card">
-                    <div class="portfolio-image">Placeholder Foto</div>
-                    <div class="portfolio-body">
-                        <span class="badge"><?= $item['category']; ?></span>
-                        <h3><?= $item['title']; ?></h3>
-                        <p><?= $item['desc']; ?></p>
-                        <div class="meta-row"><span><?= $item['year']; ?></span><span><?= $item['status']; ?></span></div>
-                    </div>
-                </article>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
+<section class="bg-slate-50 py-20"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"><?php foreach ($portfolio as $index => $item): ?><article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"><div class="relative flex h-40 items-end overflow-hidden bg-gradient-to-br <?= $index % 2 === 0 ? 'from-blue-100 to-blue-50' : 'from-red-100 to-slate-50'; ?> p-6"><span class="absolute right-4 top-1 text-8xl font-black text-brand-blue/5">ELR</span><span class="relative rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-red shadow-sm"><?= $item['category']; ?></span></div><div class="p-6"><h2 class="text-xl font-black text-brand-navy"><?= $item['title']; ?></h2><p class="mt-3 leading-7 text-slate-500"><?= $item['desc']; ?></p><div class="mt-5 flex justify-between border-t border-slate-200 pt-4 text-sm font-bold text-slate-500"><span><?= $item['year']; ?></span><span><?= $item['status']; ?></span></div></div></article><?php endforeach; ?></div></div></section>
 
-<section class="section-pad">
-    <div class="container split-grid">
-        <div>
-            <span class="eyebrow">Catatan Portofolio</span>
-            <h2>Gunakan foto asli agar lebih dipercaya.</h2>
-        </div>
-        <div class="content-block">
-            <p>Untuk versi final, bagian placeholder dapat diganti dengan foto RAT, foto pelatihan anggota, foto UMKM binaan, foto kantor, dokumentasi bazar, atau dokumentasi penyerahan program. Hindari memakai gambar yang terlalu generik agar company profile terasa lebih nyata.</p>
-            <a href="kontak.php" class="btn btn-primary">Konsultasi Program</a>
-        </div>
-    </div>
-</section>
+<section class="py-20"><div class="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8"><div><span class="font-bold text-brand-red">Kolaborasi</span><h2 class="mt-3 max-w-3xl text-3xl font-black text-brand-navy sm:text-4xl">Mari tumbuhkan lebih banyak program bermanfaat di Lombok.</h2></div><a href="kontak.php" class="shrink-0 rounded-full bg-brand-blue px-6 py-3 font-bold text-white shadow-lg shadow-blue-900/20">Hubungi Pengurus</a></div></section>
 
 <?php include 'includes/footer.php'; ?>

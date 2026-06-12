@@ -1,46 +1,7 @@
-<?php $pageTitle = 'Kontak - Koperasi Syariah El-Rahma'; include 'includes/header.php'; ?>
+<?php $pageTitle = 'Kontak - Koperasi Syariah El Rahma Lombok Rinjani'; include 'includes/header.php'; ?>
 
-<section class="page-hero compact-hero">
-    <div class="container">
-        <span class="eyebrow">Kontak</span>
-        <h1>Hubungi pengurus koperasi.</h1>
-        <p>Gunakan halaman ini untuk pendaftaran anggota, pertanyaan layanan, atau konsultasi program koperasi.</p>
-    </div>
-</section>
+<section class="bg-gradient-to-br from-brand-blue to-brand-navy py-16 text-white sm:py-20"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><span class="text-sm font-bold uppercase tracking-widest text-white/65">Kontak</span><h1 class="mt-4 max-w-4xl text-4xl font-black leading-tight sm:text-5xl">Mari terhubung dengan pengurus koperasi.</h1><p class="mt-5 max-w-3xl text-lg leading-8 text-white/70">Dapatkan informasi keanggotaan, simpanan, pembiayaan, atau program kemitraan.</p></div></section>
 
-<section class="section-pad">
-    <div class="container contact-grid">
-        <div class="contact-card">
-            <h2>Informasi Kantor</h2>
-            <p><strong>Alamat</strong><br><?= $site['address']; ?></p>
-            <p><strong>Telepon/WhatsApp</strong><br><?= $site['phone']; ?></p>
-            <p><strong>Email</strong><br><?= $site['email']; ?></p>
-            <p><strong>Jam Layanan</strong><br><?= $site['office_hours']; ?></p>
-            <a href="<?= $site['wa_link']; ?>" class="btn btn-primary">Chat WhatsApp</a>
-        </div>
-        <form class="contact-form" action="#" method="post">
-            <h2>Formulir Pesan</h2>
-            <label>Nama Lengkap
-                <input type="text" name="nama" placeholder="Nama Anda">
-            </label>
-            <label>Nomor WhatsApp
-                <input type="text" name="whatsapp" placeholder="08xxxxxxxxxx">
-            </label>
-            <label>Keperluan
-                <select name="keperluan">
-                    <option>Pendaftaran Anggota</option>
-                    <option>Informasi Simpanan</option>
-                    <option>Informasi Pembiayaan</option>
-                    <option>Kemitraan UMKM</option>
-                </select>
-            </label>
-            <label>Pesan
-                <textarea name="pesan" rows="5" placeholder="Tulis pesan Anda"></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Kirim Pesan</button>
-            <small>Form ini masih contoh tampilan. Untuk mengirim pesan sungguhan, hubungkan ke database atau WhatsApp API.</small>
-        </form>
-    </div>
-</section>
+<section class="py-20"><div class="mx-auto grid max-w-7xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8"><div class="rounded-3xl bg-brand-navy p-8 text-white"><h2 class="text-2xl font-black">Informasi Kantor</h2><div class="mt-7 space-y-6 text-white/70"><div><strong class="block text-sm text-white">Alamat</strong><p class="mt-1 leading-7"><?= $site['address']; ?></p></div><div><strong class="block text-sm text-white">Telepon / WhatsApp</strong><p class="mt-1"><?= $site['phone']; ?></p></div><div><strong class="block text-sm text-white">Email</strong><p class="mt-1"><?= $site['email']; ?></p></div><div><strong class="block text-sm text-white">Jam Layanan</strong><p class="mt-1"><?= $site['office_hours']; ?></p></div></div><a href="<?= $site['wa_link']; ?>" target="_blank" rel="noopener" class="mt-8 inline-flex rounded-full bg-white px-6 py-3 font-bold text-brand-navy">Chat WhatsApp</a></div><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"><span class="font-bold text-brand-red">Layanan Informasi</span><h2 class="mt-3 text-3xl font-black text-brand-navy">Apa yang bisa kami bantu?</h2><p class="mt-4 leading-7 text-slate-500">Hubungi pengurus melalui WhatsApp untuk mendapatkan respons lebih cepat mengenai layanan berikut.</p><div class="mt-7 grid gap-4 sm:grid-cols-2"><?php $topics = ['Pendaftaran Anggota','Informasi Simpanan','Informasi Pembiayaan','Kemitraan UMKM']; foreach ($topics as $topic): ?><a href="<?= $site['wa_link']; ?>?text=<?= urlencode('Assalamualaikum, saya ingin bertanya tentang ' . $topic . '.'); ?>" target="_blank" rel="noopener" class="rounded-2xl border border-slate-200 p-5 font-bold text-brand-navy transition hover:border-brand-blue hover:bg-blue-50"><?= $topic; ?><span class="mt-2 block text-sm font-normal text-slate-500">Mulai percakapan melalui WhatsApp →</span></a><?php endforeach; ?></div></div></div></section>
 
 <?php include 'includes/footer.php'; ?>

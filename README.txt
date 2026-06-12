@@ -1,39 +1,37 @@
-WEBSITE COMPANY PROFILE + PORTOFOLIO KOPERASI SYARIAH
-======================================================
-
-Nama folder:
-koperasi-syariah-elrahma-native
+WEBSITE KOPERASI SYARIAH EL RAHMA LOMBOK RINJANI
+================================================
 
 Teknologi:
 - PHP Native
-- HTML
-- CSS custom
+- Tailwind CSS melalui CDN
 - JavaScript sederhana untuk menu mobile
-- Tanpa database
+- SQLite untuk akun, cabang, dan pengajuan dana
 
 Cara menjalankan di XAMPP:
-1. Extract file ZIP.
-2. Pindahkan folder koperasi-syariah-elrahma-native ke folder htdocs.
-3. Jalankan Apache di XAMPP.
-4. Buka browser:
-   http://localhost/koperasi-syariah-elrahma-native/
+1. Tempatkan folder el-rahma di dalam htdocs.
+2. Jalankan Apache di XAMPP.
+3. Buka http://localhost/el-rahma/
 
-File penting untuk diedit:
-- data/data.php
-  Untuk mengganti nama koperasi, alamat, nomor HP, email, statistik, layanan, berita, dan portofolio.
+Data utama berada di data/data.php.
+Logo dan foto kantor berada di assets/img/.
 
-- assets/img/logo-elrahma.jpeg
-  Logo koperasi dari file yang diberikan.
+Halaman:
+- index.php       : Beranda
+- profil.php      : Profil koperasi
+- layanan.php     : Layanan anggota
+- portofolio.php  : Program koperasi
+- kontak.php      : Kontak dan tautan WhatsApp
+- login.php       : Login admin dan member
+- register.php    : Pendaftaran member
+- dashboard.php   : Dashboard sesuai role
+- export.php      : Ekspor data pengajuan untuk Excel
 
-- assets/css/style.css
-  Untuk mengubah tampilan warna, layout, spacing, dan responsive design.
-
-Halaman yang tersedia:
-- index.php          : Beranda
-- profil.php         : Company Profile
-- layanan.php        : Layanan koperasi
-- portofolio.php     : Portofolio program koperasi
-- kontak.php         : Kontak
+Akun demo:
+- Member: member@elrahma.id / Member123!
+- Admin Rempung: admin.rempung@elrahma.id / Admin123!
+- Admin Pringgabaya: admin.pringgabaya@elrahma.id / Admin123!
+- Admin Mataram: admin.mataram@elrahma.id / Admin123!
+- Admin Mamben: admin.mamben@elrahma.id / Admin123!
 
 Catatan:
-Bagian foto pada hero dan portofolio masih dibuat sebagai placeholder agar mudah diganti dengan foto asli kantor, RAT, pelatihan anggota, bazar UMKM, atau dokumentasi kegiatan koperasi.
+Tampilan menggunakan utility class Tailwind langsung pada markup PHP. Tidak ada lagi stylesheet CSS custom.

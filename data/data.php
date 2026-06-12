@@ -1,12 +1,12 @@
 <?php
 $site = [
-    'name' => 'Koperasi Syariah El-Rahma',
-    'short_name' => 'EL-Rahma',
+    'name' => 'Koperasi Syariah El Rahma Lombok Rinjani',
+    'short_name' => 'El Rahma Lombok Rinjani',
     'tagline' => 'Tumbuh Bersama, Berdaya Secara Syariah',
     'description' => 'Koperasi syariah yang membantu anggota mengelola simpanan, pembiayaan, dan pengembangan usaha dengan prinsip amanah, adil, dan transparan.',
     'phone' => '0812-3456-7890',
     'email' => 'info@elrahmakoperasi.id',
-    'address' => 'Jl. Contoh Koperasi No. 12, Kota Anda, Indonesia',
+    'address' => 'Lombok, Nusa Tenggara Barat, Indonesia',
     'office_hours' => 'Senin - Jumat, 08.00 - 16.00 WITA',
     'wa_link' => 'https://wa.me/6281234567890',
     'year' => date('Y')

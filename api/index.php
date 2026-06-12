@@ -22,6 +22,19 @@ $routes = [
     '/kontak' => 'kontak.php',
     '/kontak/' => 'kontak.php',
     '/kontak.php' => 'kontak.php',
+    '/login' => 'login.php',
+    '/login/' => 'login.php',
+    '/login.php' => 'login.php',
+    '/register' => 'register.php',
+    '/register/' => 'register.php',
+    '/register.php' => 'register.php',
+    '/logout' => 'logout.php',
+    '/logout.php' => 'logout.php',
+    '/dashboard' => 'dashboard.php',
+    '/dashboard/' => 'dashboard.php',
+    '/dashboard.php' => 'dashboard.php',
+    '/export' => 'export.php',
+    '/export.php' => 'export.php',
 ];
 
 chdir(__DIR__ . '/..');

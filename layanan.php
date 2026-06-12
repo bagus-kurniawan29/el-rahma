@@ -1,43 +1,9 @@
-<?php $pageTitle = 'Layanan - Koperasi Syariah El-Rahma'; include 'includes/header.php'; ?>
+<?php $pageTitle = 'Layanan - Koperasi Syariah El Rahma Lombok Rinjani'; include 'includes/header.php'; ?>
 
-<section class="page-hero compact-hero">
-    <div class="container">
-        <span class="eyebrow">Layanan</span>
-        <h1>Layanan simpanan, pembiayaan, dan pemberdayaan anggota.</h1>
-        <p>Susunan layanan dibuat sederhana agar mudah dipahami calon anggota dan bisa langsung disesuaikan dengan produk koperasi.</p>
-    </div>
-</section>
+<section class="bg-gradient-to-br from-brand-blue to-brand-navy py-16 text-white sm:py-20"><div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><span class="text-sm font-bold uppercase tracking-widest text-white/65">Layanan Anggota</span><h1 class="mt-4 max-w-4xl text-4xl font-black leading-tight sm:text-5xl">Simpanan, pembiayaan, dan pemberdayaan berbasis syariah.</h1><p class="mt-5 max-w-3xl text-lg leading-8 text-white/70">Layanan disusun agar mudah dipahami dan sesuai dengan kebutuhan anggota.</p></div></section>
 
-<section class="section-pad">
-    <div class="container service-grid two-col">
-        <?php foreach ($services as $service): ?>
-            <article class="service-card large-card">
-                <div class="service-icon"><?= $service['icon']; ?></div>
-                <h3><?= $service['title']; ?></h3>
-                <p><?= $service['desc']; ?></p>
-                <ul class="mini-list">
-                    <li>Proses administrasi jelas</li>
-                    <li>Pendampingan oleh pengurus</li>
-                    <li>Disesuaikan dengan kebutuhan anggota</li>
-                </ul>
-            </article>
-        <?php endforeach; ?>
-    </div>
-</section>
+<section class="py-20"><div class="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"><?php foreach ($services as $service): ?><article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"><span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 font-black text-brand-blue"><?= $service['icon']; ?></span><h2 class="mt-5 text-2xl font-black text-brand-navy"><?= $service['title']; ?></h2><p class="mt-3 leading-7 text-slate-500"><?= $service['desc']; ?></p><ul class="mt-5 space-y-2 text-sm font-semibold text-slate-600"><li>✓ Administrasi dan informasi yang jelas</li><li>✓ Pendampingan oleh pengurus koperasi</li><li>✓ Disesuaikan dengan kebutuhan anggota</li></ul></article><?php endforeach; ?></div></section>
 
-<section class="section-pad bg-soft">
-    <div class="container split-grid">
-        <div>
-            <span class="eyebrow">Alur Layanan</span>
-            <h2>Calon anggota bisa memahami proses sejak awal.</h2>
-        </div>
-        <div class="timeline">
-            <div><strong>01. Konsultasi</strong><span>Anggota menyampaikan kebutuhan simpanan atau pembiayaan.</span></div>
-            <div><strong>02. Pemeriksaan Data</strong><span>Pengurus memeriksa kelengkapan administrasi dan tujuan penggunaan dana.</span></div>
-            <div><strong>03. Akad dan Persetujuan</strong><span>Akad disepakati secara jelas sebelum layanan berjalan.</span></div>
-            <div><strong>04. Monitoring</strong><span>Koperasi melakukan pendampingan dan evaluasi berkala.</span></div>
-        </div>
-    </div>
-</section>
+<section class="bg-slate-50 py-20"><div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"><div><span class="font-bold text-brand-red">Alur Layanan</span><h2 class="mt-3 text-3xl font-black text-brand-navy sm:text-4xl">Proses yang jelas sejak awal.</h2><p class="mt-4 leading-7 text-slate-500">Anggota mendapat penjelasan mengenai persyaratan, akad, dan tahapan layanan sebelum membuat keputusan.</p></div><div class="space-y-4"><?php $steps = [['01','Konsultasi','Sampaikan kebutuhan simpanan atau pembiayaan.'],['02','Pemeriksaan Data','Pengurus memeriksa kelengkapan dan tujuan penggunaan dana.'],['03','Akad dan Persetujuan','Ketentuan disepakati secara jelas oleh kedua pihak.'],['04','Pendampingan','Koperasi melakukan monitoring dan evaluasi berkala.']]; foreach ($steps as $step): ?><div class="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5"><span class="font-black text-brand-red"><?= $step[0]; ?></span><div><strong class="text-brand-navy"><?= $step[1]; ?></strong><p class="mt-1 text-sm leading-6 text-slate-500"><?= $step[2]; ?></p></div></div><?php endforeach; ?></div></div></section>
 
 <?php include 'includes/footer.php'; ?>

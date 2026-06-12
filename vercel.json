@@ -44,6 +44,10 @@
       "dest": "/api/kontak.php"
     },
     {
+      "src": "/(login|register|logout|dashboard|export)(\\.php)?/?",
+      "dest": "/api/index.php"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
