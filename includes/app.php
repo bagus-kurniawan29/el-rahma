@@ -6,7 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         mkdir($sessionPath, 0775, true);
     }
     session_save_path($sessionPath);
-    session_start();
+    @session_start();
 }
 
 const APP_DB_PATH = __DIR__ . '/../data/koperasi.sqlite';
