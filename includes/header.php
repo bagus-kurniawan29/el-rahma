@@ -30,6 +30,11 @@ function isActive($page, $currentPage) {
     </script>
 </head>
 <body class="bg-white font-sans text-slate-800 antialiased">
+    <?php if (!databaseAvailable()): ?>
+        <div class="border-b border-amber-200 bg-amber-50 px-4 py-3 text-center text-sm font-semibold text-amber-900">
+            <?= e(databaseUnavailableMessage()); ?>
+        </div>
+    <?php endif; ?>
     <div class="bg-brand-navy text-xs text-white/80">
         <div class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-2 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
             <span><?= $site['office_hours']; ?></span>

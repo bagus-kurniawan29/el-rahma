@@ -2,6 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', getenv('APP_DEBUG') === 'true' ? '1' : '0');
+$GLOBALS['app_database_error'] = null;
 
 function databaseConfig(): array
 {
@@ -183,8 +184,25 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         'httponly' => true,
         'samesite' => 'Lax',
     ]);
-    session_set_save_handler(new DatabaseSessionHandler(db()), true);
-    session_start();
+    try {
+        session_set_save_handler(new DatabaseSessionHandler(db()), true);
+        session_start();
+    } catch (Throwable $exception) {
+        $GLOBALS['app_database_error'] = $exception;
+        error_log('El Rahma database connection failed: ' . $exception->getMessage());
+        session_save_path(sys_get_temp_dir());
+        @session_start();
+    }
+}
+
+function databaseAvailable(): bool
+{
+    return $GLOBALS['app_database_error'] === null;
+}
+
+function databaseUnavailableMessage(): string
+{
+    return 'Database MySQL belum terhubung. Atur DATABASE_URL atau DB_HOST, DB_NAME, DB_USER, dan DB_PASS pada Environment Variables Vercel, lalu lakukan redeploy.';
 }
 
 function e(?string $value): string
@@ -200,7 +218,7 @@ function redirect(string $path): never
 
 function currentUser(): ?array
 {
-    if (empty($_SESSION['user_id'])) {
+    if (!databaseAvailable() || empty($_SESSION['user_id'])) {
         return null;
     }
 
