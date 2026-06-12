@@ -5,7 +5,7 @@ Teknologi:
 - PHP Native
 - Tailwind CSS melalui CDN
 - JavaScript sederhana untuk menu mobile
-- SQLite untuk akun, cabang, dan pengajuan dana
+- MySQL (`db_el_rahma`) untuk akun, sesi, cabang, dan pengajuan dana
 
 Cara menjalankan di XAMPP:
 1. Tempatkan folder el-rahma di dalam htdocs.
@@ -14,6 +14,17 @@ Cara menjalankan di XAMPP:
 
 Data utama berada di data/data.php.
 Logo dan foto kantor berada di assets/img/.
+
+Database MySQL:
+1. Jalankan Apache dan MySQL pada XAMPP.
+2. Aplikasi otomatis membuat database `db_el_rahma` saat pertama dibuka.
+3. Alternatif manual: impor `database/db_el_rahma.sql` melalui phpMyAdmin.
+4. Jika akun MySQL berbeda, edit `config/database.php`.
+
+Deployment Vercel:
+- MySQL pada komputer lokal tidak dapat diakses langsung oleh Vercel.
+- Gunakan MySQL hosting/cloud dan isi `DATABASE_URL`, atau variabel
+  `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, dan `DB_PASS` di Vercel.
 
 Halaman:
 - index.php       : Beranda

@@ -49,8 +49,8 @@ $applications = $statement->fetchAll();
 $summary = db()->prepare('SELECT
     COUNT(*) AS total,
     SUM(CASE WHEN status = "pending" THEN 1 ELSE 0 END) AS pending,
-    SUM(CASE WHEN status = "approved" AND strftime("%Y-%m", reviewed_at) = strftime("%Y-%m", "now", "localtime") THEN amount ELSE 0 END) AS approved_month,
-    SUM(CASE WHEN status = "approved" AND strftime("%Y-%m", reviewed_at) = strftime("%Y-%m", "now", "localtime") THEN 1 ELSE 0 END) AS approved_count_month
+    SUM(CASE WHEN status = "approved" AND YEAR(reviewed_at) = YEAR(CURRENT_DATE()) AND MONTH(reviewed_at) = MONTH(CURRENT_DATE()) THEN amount ELSE 0 END) AS approved_month,
+    SUM(CASE WHEN status = "approved" AND YEAR(reviewed_at) = YEAR(CURRENT_DATE()) AND MONTH(reviewed_at) = MONTH(CURRENT_DATE()) THEN 1 ELSE 0 END) AS approved_count_month
     FROM applications WHERE branch_id = ?');
 $summary->execute([$branchId]);
 $stats = $summary->fetch();

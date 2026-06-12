@@ -1,4 +1,1 @@
-/data/koperasi.sqlite
-/data/koperasi.sqlite-journal
-/data/sessions/*
-!/data/sessions/.gitkeep
+.env
